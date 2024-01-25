@@ -1,0 +1,197 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int finalresult = 0;
+	char playagain;
+	int playquiz(void);
+	play:
+	finalresult = playquiz();
+	cout<<"Your total score is : "<<finalresult<<endl;
+	if(finalresult>=6)
+	{
+		cout<<"You are passed"<<endl;
+		cout<<"Do you want to play quiz again ? y or n"<<endl;
+		cin>>playagain;
+		if(playagain=='y' || playagain=='Y')
+		{
+			goto play;
+		}
+		else
+		{
+			cout<<"Thank you to play quiz"<<endl;
+		}
+	}
+	else
+	{
+		cout<<"you are fail"<<endl;
+		cout<<"Do you want to play quiz again ? y or n"<<endl;
+		cin>>playagain;
+		if(playagain=='y' || playagain=='Y')
+		{
+			playquiz();
+		}
+		else
+		{
+			cout<<"Thank you to play quiz"<<endl;
+		}
+	}
+
+	
+}
+
+
+int playquiz()
+{
+	char c;
+	char option;
+	int score=0;
+	playInsideFun:
+	cout<<"------------Welcome to Quiz Game--------------"<<endl;
+	cout<<"-------Please follow the instructions-------"<<endl;
+	cout<<"Step 1 : Quiz contains total 10 questions"<<endl;
+	cout<<"Step 2 : You will be given 1 mark for each right answer"<<endl;
+	cout<<"step 3 : No Negative Marking"<<endl;
+	cout<<"Step 4 : Please press s to start the quiz"<<endl;
+	cout<<"Step 5 : Please select the option a,b,c,d"<<endl;
+	cout<<"Step 6 : If your score is greater >= 6, you will pass the quiz"<<endl;
+	cin>>c;
+	
+	if(c=='s' || c=='S')
+	{
+		cout<<"Q1. What is the capital of India ?"<<endl;
+		cout<<"(a) Delhi (b) Mumbai (c) Kolkatta (d) Chennai"<<endl;
+		
+		cin>>option;
+		if(option=='a'|| option=='A')
+		{
+			score=score+1;
+		}
+		else
+		{
+			score=score+0;
+		}
+		
+		cout<<"Q2. Who is the prime minister of India ?"<<endl;
+		cout<<"(a) Modi (b) Patil (c) Pawar (d) Mohan"<<endl;
+		
+		cin>>option;
+		if(option=='a'|| option=='A')
+		{
+			score=score+1;
+		}
+		else
+		{
+			score=score+0;
+		}
+		
+		cout<<"Q3. What is the national bird of India ?"<<endl;
+		cout<<"(a) pigeon (b) peacock (c) crow (d) sparrow"<<endl;
+		
+		cin>>option;
+		if(option=='b'|| option=='B')
+		{
+			score=score+1;
+		}
+		else
+		{
+			score=score+0;
+		}
+		
+		cout<<"Q4. What is the national animal of India ?"<<endl;
+		cout<<"(a) Tiger (b) Lion (c) Dog (d) Cat"<<endl;
+		
+		cin>>option;
+		if(option=='a'|| option=='A')
+		{
+			score=score+1;
+		}
+		else
+		{
+			score=score+0;
+		}
+		cout<<"Q5. What is the national flower of India ?"<<endl;
+		cout<<"(a) Rose (b) Lily (c) Lotus (d) Sunflower"<<endl;
+		
+		cin>>option;
+		if(option=='c'|| option=='C')
+		{
+			score=score+1;
+		}
+		else
+		{
+			score=score+0;
+		}
+		
+		cout<<"Q6. Who is the chief minister of maharashtra ?"<<endl;
+		cout<<"(a) pawer (b) fadnavis (c) jeta (d) Shinde"<<endl;
+		
+		cin>>option;
+		if(option=='d'|| option=='D')
+		{
+			score=score+1;
+		}
+		else
+		{
+			score=score+0;
+		}
+		
+		cout<<"Q7. What is the capital of UP ?"<<endl;
+		cout<<"(a) Lucknow (b) Mumbai (c) Kolkatta (d) Chennai"<<endl;
+		
+		cin>>option;
+		if(option=='a'|| option=='A')
+		{
+			score=score+1;
+		}
+		else
+		{
+			score=score+0;
+		}
+		
+		cout<<"Q8. Who is the captain of India ?"<<endl;
+		cout<<"(a) Rahul (b) Virat (c) Rohit (d) Pant"<<endl;
+		
+		cin>>option;
+		if(option=='c'|| option=='C')
+		{
+			score=score+1;
+		}
+		else
+		{
+			score=score+0;
+		}
+		cout<<"Q9. What is the capital of Mahrashtra ?"<<endl;
+		cout<<"(a) Delhi (b) Mumbai (c) Kolkatta (d) Chennai"<<endl;
+		
+		cin>>option;
+		if(option=='b'|| option=='B')
+		{
+			score=score+1;
+		}
+		else
+		{
+			score=score+0;
+		}
+		cout<<"Q0. Who is the leader of congress ?"<<endl;
+		cout<<"(a) Rahul (b) Roshan (c) Sonia (d) Sushil"<<endl;
+		
+		cin>>option;
+		if(option=='a'|| option=='A')
+		{
+			score=score+1;
+		}
+		else
+		{
+			score=score+0;
+		}
+	}
+	else
+	{
+		cout<<"You have entered wrong value, please enter correct value"<<endl;
+		goto playInsideFun;
+	}
+	
+	return score;
+}
